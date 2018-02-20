@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>导航</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-right (click)="Open_Menu()">
+        <span ion-text>操作</span>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="Open_Guide()">
+        <ion-icon name="help"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col ion-item *ngFor="let item of MAIN_MENU" (click)="Open_View(item)" col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3>
+        <button style="position: relative;text-align: center;height: 12rem;" ion-button color="{{ item.COLOR }}" full>
+          <ion-badge *ngIf="item.TITLE=='设备状态'" color="danger" style="position: absolute;top:15%;left:80%;">2</ion-badge>
+
+          <ion-icon style="position: absolute;top:15%;font-size:4rem;color:black;" name="{{ item.ICON }}"></ion-icon>
+          <div class="button-title">{{item.TITLE}}</div>
+          <div class="button-subtitle">{{item.SUBTITLE}}</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

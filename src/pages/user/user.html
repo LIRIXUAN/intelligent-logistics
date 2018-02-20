@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>用户</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      用户信息
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="/assets/imgs/bjork-live.jpg">
+          </ion-avatar>
+          <h1>{{ user_info.REAL_NAME }}</h1>
+          <h2>登录名：{{ user_info.USERNAME }}</h2>
+          <h2>用户组：{{ user_info.USER_GROUP }}</h2>
+        </ion-item>
+
+        <button ion-button block (click)="change_password()">修改密码</button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>服务器管理</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>Name</ion-col>
+      <ion-col col-8>Value</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of server_status">
+      <ion-col col-4>{{item[0]}}</ion-col>
+      <ion-col col-8>{{item[1]}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,132 @@
+<html ng-app="mySuperApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>安阳市人民医院物流管理系统</title>
+  <link href="https://cdn.bootcss.com/ionic/1.3.2/css/ionic.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.min.js"></script>
+  <script type="text/javascript">
+    angular.module('mySuperApp', ['ionic'])
+      .controller('PopupCtrl', function ($scope, $ionicPopup, $timeout) {
+
+        // Triggered on a button click, or some other target
+        $scope.showPopup = function () {
+          $scope.data = {}
+
+          // 自定义弹窗
+          var myPopup = $ionicPopup.show({
+            template: '<input type="password" ng-model="data.wifi">',
+            title: '输入目标地址',
+            subTitle: '地址是一个4位数，你可以在操作手册上查到',
+            scope: $scope,
+            buttons: [
+              { text: '取消发送' },
+              {
+                text: '发送', type: 'button-positive',
+                onTap: function (e) {
+                  if (!$scope.data.wifi) {
+                    e.preventDefault();
+                  } else {
+                    return $scope.data.wifi;
+                  }
+                }
+              },
+            ]
+          });
+          myPopup.then(function (res) {
+            console.log('Tapped!', res);
+          });
+        };
+
+        $scope.showConfirm = function () {
+          var confirmPopup = $ionicPopup.confirm({
+            title: '危险的操作',
+            template: '你确实要这样做吗？',
+            buttons: [
+              { text: '取消' },
+              { text: '确认', type: 'button-assertive' }]
+          });
+          confirmPopup.then(function (res) {
+            if (res) {
+              console.log('You are sure');
+            } else {
+              console.log('You are not sure');
+            }
+          });
+        };
+
+        //  alert（警告） 对话框
+        $scope.showAlert = function () {
+          var alertPopup = $ionicPopup.alert({
+            title: '不允许的操作',
+            template: '你没有权限进行这个操作',
+            buttons: [{ text: '知道了', type: 'button-assertive' }]
+          });
+          alertPopup.then(function (res) {
+            console.log('Thank you for not eating my delicious ice cream cone');
+          });
+        };
+      });
+  </script>
+</head>
+
+<body ng-controller="PopupCtrl">
+  <div class="bar bar-header bar-dark">
+    <div class="h1 title">物流控制</div>
+  </div>
+  <div class="tabs tabs-striped tabs-icon-top light-bg tabs-color-dark">
+    <a class="tab-item" href="status.html">
+      <i class="icon ion-home"></i>状态
+    </a>
+
+    <a class="tab-item active " href="control.html">
+      <i class="icon ion-wrench positive"></i>控制
+    </a>
+
+    <a class="tab-item " href="setting.html">
+      <i class="icon ion-settings "></i>设置
+    </a>
+
+    <a class="tab-item " href="user.html">
+      <i class="icon ion-person"></i>我
+    </a>
+  </div>
+  <div class="content has-header">
+
+    <div class="card">
+      <div class="item item-divider">
+        发送货物
+      </div>
+      <div class="item item-text-wrap">
+        <button class="button button-positive" ng-click="showPopup()">模拟发送 (点我试试)</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        一些危险的操作
+      </div>
+      <div class="item item-text-wrap">
+        <button class="button button-assertive" ng-click="showConfirm()">模拟危险的操作 (点我试试)</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        一些不允许的操作
+      </div>
+      <div class="item item-text-wrap">
+        <button class="button button-royal" ng-click="showAlert()">模拟无权限的操作 (点我试试)</button>
+      </div>
+    </div>
+
+
+
+    <script id="popup-template.html" type="text/ng-template">
+        <input ng-model="data.wifi" type="text" placeholder="Password">
+      </script>
+  </div>
+</body>
+
+</html>

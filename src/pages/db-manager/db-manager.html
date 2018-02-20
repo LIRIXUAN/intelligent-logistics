@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>数据库管理页面</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>目前只做了用户管理部分</p>
+  <button ion-button outline small>增加用户</button>
+  <ion-grid>
+    <ion-row class="header">
+      <ion-col col-3>用户名</ion-col>
+      <ion-col col-3>真实姓名</ion-col>
+      <ion-col col-3>用户组</ion-col>
+      <ion-col col-3>操作</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of db_data">
+      <ion-col col-3>{{item.USERNAME}}</ion-col>
+      <ion-col col-3>{{item.REAL_NAME}}</ion-col>
+      <ion-col col-3>{{item.USER_GROUP}}</ion-col>
+      <ion-col col-3>
+        <button ion-button outline small>编辑</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
