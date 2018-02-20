@@ -14,6 +14,19 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 运行截图
 
+![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/main_menu_android.jpg?raw=true)
+
+![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/main_menu_widel.jpg?raw=true)
+
+
+![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/status_wp.jpg?raw=true)
+
+![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/status_wp_error.jpg?raw=true)
+
+![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/change_pw_all.jpg?raw=true)
+
+![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/login_all.jpg?raw=true)
+
 ## 主要工作
 
 * 通过ionic框架和TypeScript的开发，实现物流系统运行中需要的场景和操作，所有数据都通过AXAJ动态加载。主要功能包括用户登录，session管理，用户权限管理，个人信息修改，设备的状态查询与操作，数据库管理，服务器管理等。
@@ -32,7 +45,7 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 浏览器访问 localhost 即可看到效果
 
-## 4.需要学习哪些相关技术？
+## 需要学习哪些相关技术？
 
 ### 前端部分
 
@@ -55,17 +68,17 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 * ionic 2.0版本以上 依赖 nodejs ，请安装nodejs
 
-> npm install # 安装 nodejs 依赖
-> py index.py # 启动本地服务器
-> ionic serve --no-open -port 8080 --consolelogs # 进行实时编译
-> ionic build -prod #进行优化编译，加快运行速度，简短加载时间
+> * npm install # 安装 nodejs 依赖
+> * py index.py # 启动本地服务器
+> * ionic serve --no-open -port 8080 --consolelogs # 进行实时编译
+> * ionic build -prod #进行优化编译，加快运行速度，简短加载时间
 
 * 调试技巧：
 * 请使用chrome浏览器进行调试，按下[F12]打开调试界面，在右上角的菜单中选择[more tools] ，选择[network conditions]，勾选 [disable cache] 来关闭浏览器缓存。
 * 需要发布项目？ 在index.html中加入提示信息，可以在载入界面时避免长时间的白屏。
 * 如果使用 ionic serve 运行程序，由于存在跨域访问问题，api不能正常工作。可以在chrome中安装跨域访问的插件，也可直接运行 py index.py 启动 flask 的本地调试服务器进行调试。 
 
-## 7.前端功能介绍
+## 前端功能介绍
 
 ### * 登录界面
 
