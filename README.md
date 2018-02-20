@@ -1,13 +1,13 @@
 # Intelligent Logistics System
 
-This is a traffic command system ,with Ionic as GUI and Flask as the back-end server. The system is mainly used for intelligent logistics in hospitals.
+This is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
 
 * Github link: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
 * Live demo : <http://playground.zzthbj.com>
 
 # 智能物流系统
 
-这是一个智能物流控制系统，使用Ionic作为前端框架，Flask作为后端服务器。该系统主要用于医院物流系统自动化。Ionic是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows平台，为开发过程节约了大量的时间。
+这是一个智能物流控制系统，使用Ionic作为前端web用户界面框架，Flask作为后端RESTful api服务器。该系统主要用于医院物流系统自动化。
 
 * Github 地址: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
 * 演示地址 : <http://playground.zzthbj.com>
@@ -41,9 +41,15 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 主要工作
 
+> Ionic是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
+
+> Flask是一个使用 Python 编写的轻量级 Web 应用框架。Flask也被称为 “microframework” ，因为它使用简单的核心，用 extension 增加其他功能，简单易学。
+
+> MVC模式（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
+
 * 通过ionic框架和TypeScript的开发，实现物流系统运行中需要的场景和操作，所有数据都通过AXAJ动态加载。主要功能包括用户登录，session管理，用户权限管理，个人信息修改，设备的状态查询与操作，数据库管理，服务器管理等。
 * 界面能适应不同分辨率的屏幕，并优化了在电脑上操作的使用体验。
-* 后台使用Python开发，同时能兼容Python3和Python2，不用修改程序即可在BAE或本地运行。
+* 后台使用Python开发了RESTful api接口。程序同时兼容Python3和Python2，自动识别运行环境(BAE或本地)。
 * 使用Sqlite数据库，并对数据库操作进行了封装，易于更换数据库。
 
 ## 如何运行
@@ -55,7 +61,7 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 > * pip install -r requirements.txt
 > * py index.py
 
-浏览器访问 localhost 即可看到效果
+浏览器访问 <http://127.0.0.1> 即可看到效果
 
 ## 需要学习哪些相关技术？
 
