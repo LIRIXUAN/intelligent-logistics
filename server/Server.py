@@ -89,11 +89,11 @@ def api_data(kind):
             return make_json('FAIL', '', "载入失败，内部错误")
     elif kind == 'user':
         user_group = 'Unknown'
-        if(session['ROLE'] == 'DOC'):
+        if(session['USER_GROUP'] == 'DOC'):
             user_group = '医护人员'
-        if(session['ROLE'] == 'MAN'):
+        if(session['USER_GROUP'] == 'MAN'):
             user_group = '管理人员'
-        if(session['ROLE'] == 'ENG'):
+        if(session['USER_GROUP'] == 'ENG'):
             user_group = '工程人员'
         result={'USERNAME': session['USERNAME'],'REAL_NAME': session['REAL_NAME'], 'USER_GROUP': user_group}
         return make_json('SUCC', result, '获取用户信息成功')
