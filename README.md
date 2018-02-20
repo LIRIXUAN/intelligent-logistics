@@ -15,24 +15,24 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 ## 运行截图
 
 <div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg"/>
-<p>主页面截图</p>
+<p><h3>主页面截图</h3></p>
 </div>
 
-* 大屏设备显示效果
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg"/></div>
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg"/>
+<p>大屏设备显示效果</p></div>
 
-* 物流状态显示
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg"/></div>
+* 
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg"/><p>物流状态显示</p></div>
 
-* 登录界面
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg"/></div>
+* 
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg"/><p>登录界面</p></div>
 
-* 不同设备界面对比
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_android.jpg"/></div>
+<div align=center>
+<p>不同设备界面对比</p><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_android.jpg"/><p>Android</p></div>
 
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_ios.jpg"/></div>
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_ios.jpg"/><p>iOS</p></div>
 
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_wp.jpg"/></div>
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_wp.jpg"/><p>Windows Phone</p></div>
 
 
 ## 主要工作
@@ -88,8 +88,16 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 前端功能介绍
 
-### * 登录界面
-
+### 登录界面
+这里可以登录系统，用户第一次访问时，Flask会给用户分配一个session，使用cookies加密后储存在用户的电脑中。可以设置一个cookies过期时间，使用户长时间不操作后自动重新登录。
+用户使用用户名密码登录后，后台会查询数据库确认用户名密码。若密码正确可以获取用户的真实姓名(REAL_NAME)和用户组(USER_GROUP)储存在session的dictionary中。
+之后用户的每次AXAJ请求，都会查询USERNAME是否在session中。
+Loading显示
+SQL注入防范
+数据结构
+跨域访问
+HTTP请求
+未登录跳转
 ### * 主菜单
 
 ### * 设备管理
