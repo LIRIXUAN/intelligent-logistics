@@ -19,16 +19,15 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 </div>
 
 <div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg"/>
-<p>大屏设备显示效果</p></div>
+<p><h3>大屏设备显示效果</h3></p></div>
 
-* 
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg"/><p>物流状态显示</p></div>
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg"/><p><h3>物流状态显示</h3></p></div>
 
-* 
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg"/><p>登录界面</p></div>
+
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg"/><p><h3>登录界面</h3></p></div>
 
 <div align=center>
-<p>不同设备界面对比</p><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_android.jpg"/><p>Android</p></div>
+<p><h3>不同设备界面对比</p><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_android.jpg"/><p>Android</p></div>
 
 <div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_ios.jpg"/><p>iOS</p></div>
 
@@ -86,43 +85,50 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 * 需要发布项目？ 在index.html中加入提示信息，可以在载入界面时避免长时间的白屏。
 * 如果使用 ionic serve 运行程序，由于存在跨域访问问题，api不能正常工作。可以在chrome中安装跨域访问的插件，也可直接运行 py index.py 启动 flask 的本地调试服务器进行调试。 
 
-## 前端功能介绍
+## 功能介绍
 
 ### 登录界面
-这里可以登录系统，用户第一次访问时，Flask会给用户分配一个session，使用cookies加密后储存在用户的电脑中。可以设置一个cookies过期时间，使用户长时间不操作后自动重新登录。
-用户使用用户名密码登录后，后台会查询数据库确认用户名密码。若密码正确可以获取用户的真实姓名(REAL_NAME)和用户组(USER_GROUP)储存在session的dictionary中。
-之后用户的每次AXAJ请求，都会查询USERNAME是否在session中。
-Loading显示
-SQL注入防范
-数据结构
-跨域访问
-HTTP请求
-未登录跳转
-### * 主菜单
-
-### * 设备管理
-
-### * 物流管理
-
-### * 收发包裹
-
-### * 个人信息管理
-
-### * 数据库管理
-
-### * 服务器信息
-
-
-## 后台功能介绍
-
-### * Flask RESTful api介绍
-
-### * Flask 错误处理
-
-### * session 管理
-
-### * 数据库封装
-
+* API设计
+* 这里可以登录系统，用户第一次访问时，Flask会给用户分配一个session，使用cookies加密后储存在用户的电脑中。可以设置一个cookies过期时间，使用户长时间不操作后自动重新登录。
+* 用户使用用户名密码登录后，后台会查询数据库确认用户名密码。若密码正确可以获取用户的真实姓名(REAL_NAME)和用户组(USER_GROUP)储存在session的dictionary中。
+* 动态加载
+* 之后用户的每次AXAJ请求，都会查询USERNAME是否在session中。
+* Loading显示
+* SQL注入防范
+* 数据结构
+* 跨域访问
+* HTTP请求
+* 未登录跳转
+### 主菜单
+* API设计
+* 数据库设计
+* 响应式设计
+* 权限设计
+* 数据绑定
+* 循环显示
+### 设备管理
+* API设计
+* 数据库设计
+* 页面转换
+* 顶层分类器
+* 搜索功能
+### 物流管理
+* API设计
+* 数据库设计
+### 收发包裹
+* API设计
+* 扫描识别(暂缓实现)
+### 个人信息管理
+* API设计
+* 数据库设计
+### 数据库管理
+* API设计
+* 表格显示
+* 数据库编辑
+### 服务器控制
+* API设计
+* 信息种类
+* 服务器控制(暂缓实现)
 ---------
 
 ## 开发者
