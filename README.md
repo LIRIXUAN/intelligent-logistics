@@ -14,17 +14,12 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 运行截图
 
-![main_menu_android](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/main_menu_android.jpg)
-
-![main_menu_wide](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/main_menu_wide.jpg)
-
-![status_wp](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/status_wp.jpg)
-
-![status_wp_error](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/status_wp_error.jpg)
-
-![change_pw_all](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/change_pw_all.jpg)
-
-![login_all](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/login_all.jpg)
+![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg)
+![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg)
+![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg)
+![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp_error.jpg)
+![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_all.jpg)
+![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_all.jpg)
 
 ## 主要工作
 
