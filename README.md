@@ -14,17 +14,17 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 运行截图
 
-![main_menu_android](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/main_menu_android.jpg?raw=true)
+![main_menu_android](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/main_menu_android.jpg)
 
-![main_menu_wide](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/main_menu_wide.jpg?raw=true)
+![main_menu_wide](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/main_menu_wide.jpg)
 
-![status_wp](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/status_wp.jpg?raw=true)
+![status_wp](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/status_wp.jpg)
 
-![status_wp_error](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/status_wp_error.jpg?raw=true)
+![status_wp_error](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/status_wp_error.jpg)
 
-![change_pw_all](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/change_pw_all.jpg?raw=true)
+![change_pw_all](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/change_pw_all.jpg)
 
-![login_all](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/login_all.jpg?raw=true)
+![login_all](https://raw.githubusercontent.com/JamesMurrayBIT/intelligent-logistics/master/img_readme/login_all.jpg)
 
 ## 主要工作
 
@@ -57,11 +57,11 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 ### 后端部分
 
 * 学习Python，建议学习 Python3
-* 了解Python2 的 __future__ 库，已经Python2和Python3的区别，以便使程序兼容Python2
-* 注：大部分的应用引擎，如百度应用引擎BAE，新浪应用引擎SAE，都只支持Python2
-* 学习Flask框架
+* 了解Python2 的 __future__ 库，以及Python2和Python3的区别，以便使程序兼容Python2。(注：大部分的应用引擎，如百度应用引擎BAE，新浪应用引擎SAE，都只支持Python2。可以使用 docker 容器来使其支持Python3，但会增加额外的费用)
+* 学习Flask框架，以及RESTful api的搭建和基本介绍
 * 学习SQL语言和一种数据库(sqlite 或 mysql)
-* 了解Python WSGI 程序的大致原理，和 WSGI 程序在 Apache 或 Nginx 服务器上的部署
+* 了解Python WSGI 程序的基本原理，和 WSGI 程序在 Apache 或 Nginx 服务器上的部署
+* 了解应用引擎 app.conf 的编写
 
 ## 准备好开始开发了！
 
