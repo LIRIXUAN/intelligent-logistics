@@ -14,9 +14,9 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 运行截图
 
-* 主页面截图
-
-![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg)
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg"/>
+<p>主页面截图</p>
+</div>
 
 * 大屏设备显示效果
 <div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg"/></div>
