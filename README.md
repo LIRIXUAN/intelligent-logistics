@@ -14,18 +14,17 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 运行截图
 
-![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/main_menu_android.jpg?raw=true)
+![main_menu_android](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/main_menu_android.jpg?raw=true)
 
-![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/main_menu_widel.jpg?raw=true)
+![main_menu_wide](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/main_menu_wide.jpg?raw=true)
 
+![status_wp](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/status_wp.jpg?raw=true)
 
-![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/status_wp.jpg?raw=true)
+![status_wp_error](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/status_wp_error.jpg?raw=true)
 
-![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/status_wp_error.jpg?raw=true)
+![change_pw_all](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/change_pw_all.jpg?raw=true)
 
-![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/change_pw_all.jpg?raw=true)
-
-![](https://JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/login_all.jpg?raw=true)
+![login_all](https://github.com/JamesMurrayBIT/intelligent-logistics/blob/master/img_readme/login_all.jpg?raw=true)
 
 ## 主要工作
 
