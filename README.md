@@ -14,11 +14,22 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 运行截图
 
+shot 1
 ![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg)
+
+shot 1
 ![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg)
+
+shot 1
 ![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg)
+
+shot 1
 ![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp_error.jpg)
+
+shot 1
 ![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_all.jpg)
+
+shot 1
 ![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_all.jpg)
 
 ## 主要工作
