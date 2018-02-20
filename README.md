@@ -19,25 +19,21 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 ![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg)
 
 * 大屏设备显示效果
-
-![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg)
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg"/></div>
 
 * 物流状态显示
-
-![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg)
-
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg"/></div>
 
 * 登录界面
-
-![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg)
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg"/></div>
 
 * 不同设备界面对比
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_android.jpg"/></div>
 
-![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_android.jpg)
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_ios.jpg"/></div>
 
-![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_ios.jpg)
+<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_wp.jpg"/></div>
 
-![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_wp.jpg)
 
 ## 主要工作
 
