@@ -14,25 +14,30 @@ This is a traffic command system ,with Ionic as GUI and Flask as the back-end se
 
 ## 运行截图
 
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg"/>
-<p><h3>主页面截图</h3></p>
+<div align=center>
+<h3>主页面截图</h3>
+<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg"/>
 </div>
 
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg"/>
-<p><h3>大屏设备显示效果</h3></p></div>
-
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg"/><p><h3>物流状态显示</h3></p></div>
-
-
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg"/><p><h3>登录界面</h3></p></div>
+<div align=center>
+<h3>大屏设备显示效果</h3>
+<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_wide.jpg"/>
+</div>
 
 <div align=center>
-<p><h3>不同设备界面对比</p><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_android.jpg"/><p>Android</p></div>
+<h3>物流状态显示</h3>
+<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg"/></div>
 
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_ios.jpg"/><p>iOS</p></div>
 
-<div align=center><img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_wp.jpg"/><p>Windows Phone</p></div>
+<div align=center>
+<h3>登录界面</h3>
+<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg"/></div>
 
+<div align=center>
+<h3>不同设备界面对比</p>
+<img style="width:33%" src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_android.jpg"/>
+<img style="width:33%" src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_ios.jpg"/>
+<img style="width:33%" src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/change_pw_wp.jpg"/></div>
 
 ## 主要工作
 
