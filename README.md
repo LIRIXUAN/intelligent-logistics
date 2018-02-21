@@ -2,22 +2,21 @@
 
 This is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
 
-* **Github link**: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
-* **Live demo** : <http://playground.zzthbj.com>
+* __Github link__: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
+* __Live demo__ : <http://playground.zzthbj.com>
 
 # 智能物流系统
 
 这是一个智能物流控制系统，使用Ionic作为前端web用户界面框架，Flask作为后端RESTful api服务器。该系统主要用于医院物流系统自动化。
 
-* **Github 地址**: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
-* **演示地址** : <http://playground.zzthbj.com>
+* __Github 地址__: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
+* __演示地址__ : <http://playground.zzthbj.com>
 
 ## 部分运行截图
 
 更多运行截图在文档最后
 
-![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/face.jpg")
-
+<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/face.jpg"/>
 
 ## 主要工作
 
@@ -65,11 +64,11 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 
 ## 准备好开始开发了！
 
-> **Ionic**是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
+> __Ionic__是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
 
-> **Flask**是一个使用 Python 编写的轻量级 Web 应用框架。Flask也被称为 “microframework” ，因为它使用简单的核心，用 extension 增加其他功能，简单易学。
+> __Flask__是一个使用 Python 编写的轻量级 Web 应用框架。Flask也被称为 “microframework” ，因为它使用简单的核心，用 extension 增加其他功能，简单易学。
 
-> **MVC模式**（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
+> __MVC模式__（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
 
 * git clone <https://github.com/JamesMurrayBIT/intelligent-logistics.git>
 * cd intelligent-logistics
@@ -79,7 +78,7 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 * ionic build -prod                               # 进行优化编译
 
 * __调试技巧__：
-* 请使用chrome浏览器进行调试，按下[F12]打开调试界面，在右上角的菜单中选择__[more tools]__ ，选择**[network conditions]**，勾选 **[disable cache]** 来关闭浏览器缓存。
+* 请使用chrome浏览器进行调试，按下[F12]打开调试界面，在右上角的菜单中选择__[more tools]__ ，选择__[network conditions]__，勾选 __[disable cache]__ 来关闭浏览器缓存。
 * 需要发布项目？ 在index.html中加入提示信息，可以在载入界面时避免长时间的白屏。
 * 使用 ionic build -prod 进行优化编译，加快运行速度，简短加载时间
 * 如果使用 ionic serve 运行程序，由于存在跨域访问问题，api不能正常工作。可以在chrome中安装跨域访问的插件，也可直接运行 py index.py 启动 flask 的本地调试服务器进行调试。 
@@ -87,7 +86,7 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 ## 功能介绍
 
 ### 登录界面
-* **API设计**：/api/login/<username>/<password>
+* __API设计__：/api/login/<username>/<password>
 * 注：密码未加密，注意SQL注入问题
 
 * __首次登陆__：用户第一次访问时，Flask会给用户分配一个session，使用cookies加密后储存在用户的电脑中。可以设置一个cookies过期时间，使用户长时间不操作后自动重新登录。
