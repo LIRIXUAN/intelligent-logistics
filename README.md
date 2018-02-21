@@ -9,8 +9,8 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 
 这是一个智能物流控制系统，使用Ionic作为前端web用户界面框架，Flask作为后端RESTful api服务器。该系统主要用于医院物流系统自动化。
 
-* __Github 地址__: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
-* __演示地址__ : <http://playground.zzthbj.com>
+* __Github 地址__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
+* __演示地址__  : <http://playground.zzthbj.com>
 
 ## 部分运行截图
 
@@ -64,9 +64,9 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 
 ## 准备好开始开发了！
 
-> __Ionic__是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
+> __Ionic__ 是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
 
-> __Flask__是一个使用 Python 编写的轻量级 Web 应用框架。Flask也被称为 “microframework” ，因为它使用简单的核心，用 extension 增加其他功能，简单易学。
+> __Flask__ 是一个使用 Python 编写的轻量级 Web 应用框架。Flask也被称为 “microframework” ，因为它使用简单的核心，用 extension 增加其他功能，简单易学。
 
 > __MVC模式__（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
 
@@ -86,52 +86,65 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 ## 功能介绍
 
 ### 登录界面
+
 * __API设计__：/api/login/<username>/<password>
-* 注：密码未加密，注意SQL注入问题
+* 注：密码未加密，注意SQL注入问题【暂缓实现】
 
 * __首次登陆__：用户第一次访问时，Flask会给用户分配一个session，使用cookies加密后储存在用户的电脑中。可以设置一个cookies过期时间，使用户长时间不操作后自动重新登录。
 * __请求过程__：用户点击登录按钮后，网页会使用AXAJ调用API发送登录请求，后台会查询数据库确认用户名密码。若密码正确，后台获取用户的真实姓名(REAL_NAME)和用户组(USER_GROUP)储存在session中。请求过程是异步进行的。在等待服务器响应的过程中，网页会显示一个Loading窗口，服务器返回结果后隐藏这个窗口，并根据服务器返回的信息进行窗口跳转或显示信息。
 * __数据库设计__：用户信息储存在数据库 USER_INFO 表中。主键为自增的ID；USERNAME：用户名，只允许大小写字母和数字，PASSWORD，未加密的密码；REAL_NAME：用户真实姓名；USER_GROUP：用户组,SAVE_PW：是否保存密码,LOGIN_COUNTER：登录次数计数器,FAIL_COUNTER：密码错误次数计数器。登录界面没有设置验证码，可以通过设置密码错误次数计数器上限来避免暴力破解密码。
-* __用户组设计__：系统将用户分成4个用户组，医护人员，管理人员，工程人员，超级用户。不同用户的权限不同，能看到的信息和能修改的信息也不同。
-* __数据结构__：服务器返回一个json对象，包括state,data,msg 3个key，state只可为 'FAIL' 'SUCC' 两个值。若操作成功，data为服务器响应的参数，msg为提示信息。若操作失败，data为详细的错误原因，msg为错误原因。
-* __SQL注入防范__：接收到username password 后，使用re.sub，进行过滤，只留下A-Z a-z 0-9 之内的字符，防止SQL注入
+* __用户组设计__：系统将用户分成4个用户组，医护人员(DOC)，管理人员(MEN)，工程人员(ENG)，超级用户(SU)。不同用户的权限不同，能看到的信息和能修改的信息也不同。
+* __数据结构__：若用户请求的信息无误，服务器会返回一个json对象，包括state,data,msg 3个key、state只可取 'FAIL' 'SUCC' 两个值，代表这次操作的结果。若操作成功，data为服务器响应的参数，msg为提示信息。若操作失败，data为详细的错误原因，msg为错误原因。
+* __SQL注入防范__：由于服务器会接受用户的输入，就必须考虑别有用心着通过构造特殊的输入来改变SQL语句的功能，造成破坏。因此，目前的做法师，在服务器接收到username,password，以及其他输入后，使用Python正则表达式re库中sub命令：re.sub('[^a-zA-Z0-9]','',kind)，进行过滤，只留下A-Z a-z 0-9 之内的字符，防止SQL注入。
 * __跨域访问__：通过 ionic serve 或者 ionic run 命令使用或 live reload 或者访问过外部 API 结点，会遇到 CORS=Cross origin resource sharing(跨域资源共享) 问题。在这个项目开发中，我们使用Flaks提供的调试服务器来同时提供网页文件和api响应，避免了跨域问题。
 * __HTTP请求__：为了高效处理HTTP请求，web端使用TypeScript开发了一个服务器json响应处理类，文件位于/src/network/HttpService.ts，内部使用了 AngularJS 的 http 请求类。
-* __未登录跳转__：若用户长时间未操作，或在未登录的情况下手动输入浏览器地址访问页面。由于username不在session中，服务器认为用户为登录，会返回{name:'FAIL',data: 'LOGIN', msg:"未登录"}的寄送数据，浏览器接收到状态为 FAIL 且 data 为 LOGIN 的数据包后，就会自动跳转到登录界面。
+* __未登录跳转__：若用户长时间未操作，或在未登录的情况下手动输入浏览器地址访问页面。这种情况可能是用户关闭了浏览器，下次打开时，某些浏览器会尝试刷新页面。由于cookies已经过期，username不在session中，服务器认为用户没有登录，会返回 {name:'FAIL',data: 'LOGIN', msg:"未登录"} 的json数据。浏览器接收到 state 为 'FAIL' 且 data 为 'LOGIN' 的数据包后，就会自动跳转到登录界面。
 
 ### 主菜单
-* API设计
-* /api/data/main_menu
-* 
-* 数据库设计
-* 响应式设计
-* 
-权限设计
-* 数据绑定
-* 循环显示
+
+* __API设计__：/api/data/main_menu
+* 数据库设计：主菜单的数据储存在数据库 MAIN_MENU_INFO 表中。ID：自增的主键为；TITLE：菜单名称；TARGET：点击菜单调整的页面；SUBTITLE：子菜单名字；COLOR：菜单显示的颜色；ICON：菜单图标；AUTHORITY：这一个菜单项对于的用户组
+* __响应式设计__：由于希望使用一个APP来兼容所有设备，Ionic框架对移动设备兼容较好，但是对大屏幕的计算机兼容性不太好。所有主菜单使用响应式网格进行设计，菜单大小疏密会根据屏幕大小自适应，使得使用计算机的操作人员也能获得相对较好的使用体验
+* __权限设计__：不同用户组的用户，登录系统后看到的主菜单是不同的。即使用户手动输入地址进入不属于自己权限的菜单，也不能使用相应的功能。【暂缓实现】
+* __循环显示__：由于首页数据是通过AXAJ动态加载的，数量和重量都不固定，因为不能将首页内容预先设计好。在前端开发中，使用AngularJS中的 ngFor 循环来实现视图的显示。通过，*ngFor="let item of MAIN_MENU" 进行循环，通过{{ item.XXX }}的方法来获得参数值。
+* __CSS颜色__：由于ionic提供的颜色不能满足要求，我们自定义了一些全局颜色，储存在\src\theme\variables.scss：$colors 变量中，可以根据需要使用或增减颜色。
+* __CSS元素定位__：由于主菜单使用的是block样式的button，因此文字，图标的定位需要手动实现。因此在CSS中将 button-title和，button-subtitle类的定位设置为绝对定位，将文字居中，通过top属性的不同来实现文本的定位。
+* __CSS字体大小__：由于字体大小由于屏幕大小的不同，不能设定成以px为单位的绝对大小。使用 em 和 rem 单位可以让我们的设计更加灵活，能够控制元素整体放大缩小，而不是固定大小。 当使用 rem 单位，他们转化为像素大小取决于页根元素的字体大小，即 html 元素的字体大小。 根元素字体大小乘以你 rem 值。著作权
+
 ### 设备管理
+
 * API设计
 * 数据库设计
 * 页面转换
 * 顶层分类器
 * 搜索功能
+
 ### 物流管理
+
 * API设计
 * 数据库设计
+
 ### 收发包裹
+
 * API设计
-* 扫描识别(暂缓实现)
+* 扫描识别【暂缓实现】
+
 ### 个人信息管理
+
 * API设计
 * 数据库设计
+
 ### 数据库管理
+
 * API设计
 * 表格显示
 * 数据库编辑
+
 ### 服务器控制
+
 * API设计
 * 信息种类
-* 服务器控制(暂缓实现)
+* 服务器控制【暂缓实现】
 ---------
 
 ## 更多截图
