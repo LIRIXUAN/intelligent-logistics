@@ -54,7 +54,14 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 
 ## 如何运行
 
-对于Windows用户：安装 Python(2 or 3) , Git(可选TortoiseGit) , VSCode。后在某个空目录点击右键，选择[GIT Bash Here]然后输入下面的指令
+对于Windows用户，需要安装下面的软件
+* Python(2 or 3) <https://www.python.org/downloads/windows/>
+* Git <https://git-scm.com/downloads>
+* Tortoise Git  <https://tortoisegit.org/download/> (可选)
+* Visual Studio Code <https://code.visualstudio.com/> (可选)
+* Node.js  <https://nodejs.org/en/> (可选)
+
+在某个空目录点击右键，选择[GIT Bash Here]然后输入下面的指令
 
 > * git clone <https://github.com/JamesMurrayBIT/intelligent-logistics.git>
 > * cd intelligent-logistics
@@ -84,8 +91,8 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 
 ## 准备好开始开发了！
 
-* ionic 2.0版本以上 依赖 nodejs ，请安装nodejs
-
+> * git clone <https://github.com/JamesMurrayBIT/intelligent-logistics.git>
+> * cd intelligent-logistics
 > * npm install # 安装 nodejs 依赖
 > * py index.py # 启动本地服务器
 > * ionic serve --no-open -port 8080 --consolelogs # 进行实时编译
