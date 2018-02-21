@@ -16,14 +16,7 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 
 更多运行截图在文档最后
 
-<div align=center>
-<h3>主页面截图</h3>
-<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/main_menu_android.jpg"/>
-</div>
-
-<div align=center>
-<h3>物流状态显示</h3>
-<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/status_wp.jpg"/></div>
+![](https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/face.jpg")
 
 
 ## 主要工作
@@ -151,6 +144,10 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 <div align=center>
 <h3>登录界面</h3>
 <img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/login_ios.jpg"/></div>
+
+<div align=center>
+<h3>数据库管理</h3>
+<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/db_manage.jpg"/></div>
 
 <div align=center>
 <h3>不同设备界面对比</p>
