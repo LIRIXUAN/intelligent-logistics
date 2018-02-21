@@ -64,11 +64,15 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 
 ## 准备好开始开发了！
 
+### 基本概念
+
 > __Ionic__ 是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
 
 > __Flask__ 是一个使用 Python 编写的轻量级 Web 应用框架。Flask也被称为 “microframework” ，因为它使用简单的核心，用 extension 增加其他功能，简单易学。
 
 > __MVC模式__（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
+
+### 开始开发
 
 * git clone <https://github.com/JamesMurrayBIT/intelligent-logistics.git>
 * cd intelligent-logistics
@@ -77,7 +81,7 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 * ionic serve --no-open -port 8080 --consolelogs  # 进行实时编译
 * ionic build -prod                               # 进行优化编译
 
-* __调试技巧__：
+### 调试技巧
 * 请使用chrome浏览器进行调试，按下[F12]打开调试界面，在右上角的菜单中选择__[more tools]__ ，选择__[network conditions]__，勾选 __[disable cache]__ 来关闭浏览器缓存。
 * 需要发布项目？ 在index.html中加入提示信息，可以在载入界面时避免长时间的白屏。
 * 使用 ionic build -prod 进行优化编译，加快运行速度，简短加载时间
