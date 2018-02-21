@@ -8,6 +8,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 import traceback
 import sqlite3
+import re
 #from server.db_sqlite import DB_Sqlite
 from db_sqlite import DB_Sqlite
 import platform
@@ -46,6 +47,8 @@ def any_file(filename):
 
 @app.route('/api/login/<username>/<password>', methods=['GET'])
 def api_login(username, password):
+    username=re.sub('[^a-zA-Z0-9]','',username)
+    password=re.sub('[^a-zA-Z0-9]','',password)
     sql_ext = "WHERE USERNAME='{0}' AND PASSWORD='{1}'".format(
         username, password)
     state, result = db.Select(
@@ -66,6 +69,8 @@ def api_login(username, password):
 def api_data(kind):
     if 'USERNAME' not in session:
         return make_json('FAIL', 'LOGIN', "未登录")
+
+    kind=re.sub('[^a-zA-Z0-9]','',kind)
 
     if kind == 'sensor':
         state, result = db.Select('SENSOR_INFO', ['NAME', 'IMG_SRC', 'STATUS', 'COLOR', 'CAUSE', 'DETAIL'])

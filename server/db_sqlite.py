@@ -5,6 +5,7 @@ import os
 import sys
 import traceback
 import sqlite3
+import re
 from collections import OrderedDict
 
 class DB_Sqlite:
