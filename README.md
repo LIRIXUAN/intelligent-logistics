@@ -82,7 +82,7 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 * ionic build -prod                               # 进行优化编译
 
 ### 调试技巧
-* 请使用chrome浏览器进行调试，按下[F12]打开调试界面，在右上角的菜单中选择__[more tools]__ ，选择__[network conditions]__，勾选 __[disable cache]__ 来关闭浏览器缓存。
+* 请使用chrome浏览器进行调试，按下[F12]打开调试界面，在右上角的菜单中选择__[more tools]__ ，选择 __[network conditions]__ ，勾选  __[disable cache]__  来关闭浏览器缓存。
 * 需要发布项目？ 在index.html中加入提示信息，可以在载入界面时避免长时间的白屏。
 * 使用 ionic build -prod 进行优化编译，加快运行速度，简短加载时间
 * 如果使用 ionic serve 运行程序，由于存在跨域访问问题，api不能正常工作。可以在chrome中安装跨域访问的插件，也可直接运行 py index.py 启动 flask 的本地调试服务器进行调试。 
