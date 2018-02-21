@@ -6,7 +6,6 @@ import sys
 import traceback
 import sqlite3
 import re
-from collections import OrderedDict
 
 class DB_Sqlite:
     def __init__(self, DB_Name):
@@ -28,7 +27,6 @@ class DB_Sqlite:
             cols += x + ","
         cols = cols[:-1]
         sql = "SELECT {0} FROM {1} {2}".format(cols, Table_Name,Extra_Sql)
-        #print(sql)
         state, raw = self.run_cmd(sql)
 
         if(state == False):
@@ -43,10 +41,9 @@ class DB_Sqlite:
         return True,result
 
     def Create_Table(self, Table_Name, Key_Data):
-        sql = "SELECT COUNT(*) FROM sqlite_master where type='table' and name='{0}'".format(
-            Table_Name)
+        sql = "SELECT COUNT(*) FROM sqlite_master where type='table' and name='{0}'".format(Table_Name)
         state, result = self.run_cmd(sql)
-        if(state == False):
+        if not state:
             print(result)
             return result
 

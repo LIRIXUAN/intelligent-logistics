@@ -3,15 +3,16 @@ from __future__ import print_function
 import time
 from flask import Flask, safe_join, send_file, make_response, jsonify, escape, request, session, redirect, url_for
 import os
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+import platform
 import traceback
 import sqlite3
 import re
-#from server.db_sqlite import DB_Sqlite
-from db_sqlite import DB_Sqlite
-import platform
+from server.db_sqlite import DB_Sqlite
+
+import sys
+if(platform.python_version().startswith('2.')):
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
 
 # app = flask.Flask(__name__, static_folder='./static',static_url_path='/static')
 app = Flask(__name__)
@@ -47,8 +48,8 @@ def any_file(filename):
 
 @app.route('/api/login/<username>/<password>', methods=['GET'])
 def api_login(username, password):
-    username=re.sub('[^a-zA-Z0-9]','',username)
-    password=re.sub('[^a-zA-Z0-9]','',password)
+    username = re.sub('[^a-zA-Z0-9]', '', username)
+    password = re.sub('[^a-zA-Z0-9]', '', password)
     sql_ext = "WHERE USERNAME='{0}' AND PASSWORD='{1}'".format(
         username, password)
     state, result = db.Select(
@@ -65,15 +66,16 @@ def api_login(username, password):
         return make_json('FAIL', '', '服务器内部错误')
 
 
-@app.route('/api/data/<kind>', methods=['GET'])
-def api_data(kind):
+@app.route('/api/data/<api_raw>', methods=['GET'])
+def api_data(api_raw):
     if 'USERNAME' not in session:
         return make_json('FAIL', 'LOGIN', "未登录")
 
-    kind=re.sub('[^a-zA-Z0-9]','',kind)
+    kind = re.sub('[^a-zA-Z0-9_-]', '', api_raw)
 
     if kind == 'sensor':
-        state, result = db.Select('SENSOR_INFO', ['NAME', 'IMG_SRC', 'STATUS', 'COLOR', 'CAUSE', 'DETAIL'])
+        state, result = db.Select(
+            'SENSOR_INFO', ['NAME', 'IMG_SRC', 'STATUS', 'COLOR', 'CAUSE', 'DETAIL'])
         if(state):
             return make_json('SUCC', result, '状态数据载入成功')
         else:
@@ -93,14 +95,13 @@ def api_data(kind):
         else:
             return make_json('FAIL', '', "载入失败，内部错误")
     elif kind == 'user':
-        user_group = 'Unknown'
-        if(session['USER_GROUP'] == 'DOC'):
-            user_group = '医护人员'
-        if(session['USER_GROUP'] == 'MAN'):
-            user_group = '管理人员'
-        if(session['USER_GROUP'] == 'ENG'):
-            user_group = '工程人员'
-        result={'USERNAME': session['USERNAME'],'REAL_NAME': session['REAL_NAME'], 'USER_GROUP': user_group}
+        GROUP={'DOC':'医护人员','MAN':'管理人员','ENG':'工程人员','SU':'超级用户'}
+        if session['USER_GROUP'] in GROUP:
+            user_group = GROUP[session['USER_GROUP']]
+        else:
+            user_group='unknown'
+        result = {'USERNAME': session['USERNAME'],
+                  'REAL_NAME': session['REAL_NAME'], 'USER_GROUP': user_group}
         return make_json('SUCC', result, '获取用户信息成功')
     elif kind == 'logout':
         session.pop('USERNAME')
@@ -119,12 +120,16 @@ def api_data(kind):
         status_dict.append(['python_compiler', platform.python_compiler()])
         status_dict.append(['python_version', platform.python_version()])
         return make_json('SUCC', status_dict, '载入服务器状态成功')
-    elif kind=='db-user':
-        state, result = db.Select('USER_INFO', ['USERNAME', 'REAL_NAME', 'USER_GROUP'])
+    elif kind == 'db-user':
+        state, result = db.Select(
+            'USER_INFO', ['USERNAME', 'REAL_NAME', 'USER_GROUP'])
         if(state):
             return make_json('SUCC', result, '载入服务器状态成功')
         else:
             return make_json('FAIL', '', '数据库错误')
+    else:
+        return make_json('FAIL', '', '未知API')
+
 
 def Get_App():
     return app
