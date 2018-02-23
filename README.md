@@ -1,6 +1,6 @@
 # Intelligent Logistics System
 
-This is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
+What you are looking at is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
 
 * __Github link__: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
 * __Live demo__ : <http://playground.zzthbj.com>
@@ -82,7 +82,7 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 * ionic build -prod                               # 进行优化编译
 
 ### 调试技巧
-* 请使用chrome浏览器进行调试，按下[F12]打开调试界面，在右上角的菜单中选择__[more tools]__ ，选择 __[network conditions]__ ，勾选  __[disable cache]__  来关闭浏览器缓存。
+* 请使用chrome浏览器进行调试，按下 __[F12]__ 打开调试界面，在右上角的菜单中选择 __[more tools]__ ，选择 __[network conditions]__ ，勾选  __[disable cache]__  来关闭浏览器缓存。
 * 需要发布项目？ 在index.html中加入提示信息，可以在载入界面时避免长时间的白屏。
 * 使用 ionic build -prod 进行优化编译，加快运行速度，简短加载时间
 * 如果使用 ionic serve 运行程序，由于存在跨域访问问题，api不能正常工作。可以在chrome中安装跨域访问的插件，也可直接运行 py index.py 启动 flask 的本地调试服务器进行调试。 
@@ -91,9 +91,8 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 
 ### 登录界面
 
-* __API设计__：/api/login/<username>/<password>
+* __API设计__：/api/login/[username]/[password]
 * 注：密码未加密，注意SQL注入问题【暂缓实现】
-
 * __首次登陆__：用户第一次访问时，Flask会给用户分配一个session，使用cookies加密后储存在用户的电脑中。可以设置一个cookies过期时间，使用户长时间不操作后自动重新登录。
 * __请求过程__：用户点击登录按钮后，网页会使用AXAJ调用API发送登录请求，后台会查询数据库确认用户名密码。若密码正确，后台获取用户的真实姓名(REAL_NAME)和用户组(USER_GROUP)储存在session中。请求过程是异步进行的。在等待服务器响应的过程中，网页会显示一个Loading窗口，服务器返回结果后隐藏这个窗口，并根据服务器返回的信息进行窗口跳转或显示信息。
 * __数据库设计__：用户信息储存在数据库 USER_INFO 表中。主键为自增的ID；USERNAME：用户名，只允许大小写字母和数字，PASSWORD，未加密的密码；REAL_NAME：用户真实姓名；USER_GROUP：用户组,SAVE_PW：是否保存密码,LOGIN_COUNTER：登录次数计数器,FAIL_COUNTER：密码错误次数计数器。登录界面没有设置验证码，可以通过设置密码错误次数计数器上限来避免暴力破解密码。
@@ -107,7 +106,7 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 ### 主菜单
 
 * __API设计__：/api/data/main_menu
-* 数据库设计：主菜单的数据储存在数据库 MAIN_MENU_INFO 表中。ID：自增的主键为；TITLE：菜单名称；TARGET：点击菜单调整的页面；SUBTITLE：子菜单名字；COLOR：菜单显示的颜色；ICON：菜单图标；AUTHORITY：这一个菜单项对于的用户组
+* __数据库设计__：主菜单的数据储存在数据库 MAIN_MENU_INFO 表中。ID：自增的主键为；TITLE：菜单名称；TARGET：点击菜单调整的页面；SUBTITLE：子菜单名字；COLOR：菜单显示的颜色；ICON：菜单图标；AUTHORITY：这一个菜单项对于的用户组
 * __响应式设计__：由于希望使用一个APP来兼容所有设备，Ionic框架对移动设备兼容较好，但是对大屏幕的计算机兼容性不太好。所有主菜单使用响应式网格进行设计，菜单大小疏密会根据屏幕大小自适应，使得使用计算机的操作人员也能获得相对较好的使用体验
 * __权限设计__：不同用户组的用户，登录系统后看到的主菜单是不同的。即使用户手动输入地址进入不属于自己权限的菜单，也不能使用相应的功能。【暂缓实现】
 * __循环显示__：由于首页数据是通过AXAJ动态加载的，数量和重量都不固定，因为不能将首页内容预先设计好。在前端开发中，使用AngularJS中的 ngFor 循环来实现视图的显示。通过，*ngFor="let item of MAIN_MENU" 进行循环，通过{{ item.XXX }}的方法来获得参数值。
@@ -116,38 +115,36 @@ This is a traffic command system, which uses Ionic as web interface framework ,F
 * __CSS字体大小__：由于字体大小由于屏幕大小的不同，不能设定成以px为单位的绝对大小。使用 em 和 rem 单位可以让我们的设计更加灵活，能够控制元素整体放大缩小，而不是固定大小。 当使用 rem 单位，他们转化为像素大小取决于页根元素的字体大小，即 html 元素的字体大小。 根元素字体大小乘以你 rem 值。著作权
 
 ### 设备管理
-
-* API设计
-* 数据库设计
-* 页面转换
-* 顶层分类器
-* 搜索功能
+                                    
+* __API设计__：/api/data/sensor
+* __数据库设计__：主菜单的数据储存在数据库 SENSOR_INFO 表中。ID：自增的主键为；STATUS：为传感器的状态，有可以使正常，故障、离线；CAUSE：如果传感器故障，这个值就代表故障原因；DETAIL：传感器的详细信息，如安装位置，接线编号等；COLOR：状态显示的颜色；IMG_SRC：传感器缩略图的路径。
+* __页面设计__：点击列表中传感器信息时，会打开传感器的详细信息。传感器的详细信息界面，没有再使用AXAJ请求获取数据，而是通过页面的push方法，同时传输了传感器详细信息的数据。页面顶端存在一个分类器，可以选择显示所有的信息和只显示故障的信息。故障信息的列表是在网页端通过遍历所有传感器列表得到的。如果选择所有传感器页面，页面顶端会有一个搜索条。可以对传感器的名字进行匹配，这个搜索条的实现也是通过JavaScript在浏览器中实现的。
 
 ### 物流管理
 
-* API设计
-* 数据库设计
+* __API设计__：/api/data/transport
+* __数据库设计__：主菜单的数据储存在数据库 SENSOR_INFO 表中。ID：自增的主键为；STATUS：为传感器的状态，有可以使正常，故障、离线；CAUSE：如果传感器故障，这个值就代表故障原因；DETAIL：传感器的详细信息，如安装位置，接线编号等；COLOR：状态显示的颜色；IMG_SRC：传感器缩略图的路径。
 
 ### 收发包裹
 
-* API设计
+* __API设计__：/api/data/transmit
 * 扫描识别【暂缓实现】
 
 ### 个人信息管理
 
-* API设计
-* 数据库设计
+* __API设计__：/api/data/user
+* __信息显示__：直接读取储存在session中的用户信息来实现
 
 ### 数据库管理
 
-* API设计
-* 表格显示
-* 数据库编辑
+* __API设计__：/api/data/db-[selected]  比如/api/data/db-user
+* __表格显示__：ionic中的表格不能简单时候用HTML中的table，而需要使用ionic的响应式网格系统。ion-grid 通过ion-row ion-col来显示行列，通过col-* , col-*-*的形式来适应不同的屏幕大小。由于网格默认是不带边框和背景颜色的的，所以需要修改CSS文件来使得ionic网格具有边框，使表格的首行具有一个背景。
+* __数据库编辑__：【暂缓实现】
 
-### 服务器控制
+### 服务器信息与控制
 
-* API设计
-* 信息种类
+* __API设计__：/api/data/server
+* __信息种类__：通过这个接口，可以获取服务器的硬件和部分软件信息。如服务器的CPU，操作系统情况，和使用的Python版本等信息。
 * 服务器控制【暂缓实现】
 ---------
 
