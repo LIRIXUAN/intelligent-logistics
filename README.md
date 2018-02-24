@@ -36,10 +36,12 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 
 在某个空目录点击右键，选择[GIT Bash Here]然后输入下面的指令
 
-* git clone <https://github.com/JamesMurrayBIT/intelligent-logistics.git>
-* cd intelligent-logistics
-* pip install -r requirements.txt
-* py index.py
+```shell
+git clone https://github.com/JamesMurrayBIT/intelligent-logistics.git
+cd intelligent-logistics
+pip install -r requirements.txt
+py index.py
+```
 
 浏览器访问 <http://127.0.0.1> 即可看到效果
 
@@ -51,7 +53,7 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 * 请了解TypeScript与JavaScript的异同、Sass与CSS的异同。
 * 建议了解VSCode编辑器的基本使用方法。
 * 学习Git的使用
-* 请参阅Ionic的官方文档<https://ionicframework.com/docs/>学习Ionic框架的组件及API的使用
+* 请参阅Ionic的官方文档 [Ionic Doc](https://ionicframework.com/docs/) 学习Ionic框架的组件及API的使用
 
 ### 后端部分
 
@@ -74,12 +76,14 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 
 ### 开始开发
 
-* git clone <https://github.com/JamesMurrayBIT/intelligent-logistics.git>
-* cd intelligent-logistics
-* npm install     # 安装 nodejs 依赖
-* py index.py     # 启动本地服务器
-* ionic serve --no-open -port 8080 --consolelogs  # 进行实时编译
-* ionic build -prod                               # 进行优化编译
+```shell
+git clone https://github.com/JamesMurrayBIT/intelligent-logistics.git
+cd intelligent-logistics
+npm install     # 安装 nodejs 依赖
+py index.py     # 启动本地服务器
+ionic serve --no-open -port 8080 --consolelogs  # 进行实时编译
+ionic build -prod                               # 进行优化编译
+```
 
 ### 调试技巧
 * 请使用chrome浏览器进行调试，按下 __[F12]__ 打开调试界面，在右上角的菜单中选择 __[more tools]__ ，选择 __[network conditions]__ ，勾选  __[disable cache]__  来关闭浏览器缓存。
