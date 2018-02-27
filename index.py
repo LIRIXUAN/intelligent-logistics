@@ -12,3 +12,4 @@ if(os.getcwd().startswith("/home/bae")):
     application=WSGIApplication(app)
 else:
     app.run(host='0.0.0.0', port=80, threaded=True, debug=True)
+    

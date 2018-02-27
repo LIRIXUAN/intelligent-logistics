@@ -79,7 +79,9 @@ py index.py
 ```shell
 git clone https://github.com/JamesMurrayBIT/intelligent-logistics.git
 cd intelligent-logistics
+npm install -g ionic cordova
 npm install     # 安装 nodejs 依赖
+
 py index.py     # 启动本地服务器
 ionic serve --no-open -port 8080 --consolelogs  # 进行实时编译
 ionic build -prod                               # 进行优化编译
