@@ -74,8 +74,7 @@ def api_data(api_raw):
     kind = re.sub('[^a-zA-Z0-9_-]', '', api_raw)
 
     if kind == 'sensor':
-        state, result = db.Select(
-            'SENSOR_INFO', ['NAME', 'IMG_SRC', 'STATUS', 'COLOR', 'CAUSE', 'DETAIL'])
+        state, result = db.Select('SENSOR_INFO', ['NAME', 'IMG_SRC', 'STATUS', 'COLOR', 'CAUSE', 'DETAIL'])
         if(state):
             return make_json('SUCC', result, '状态数据载入成功')
         else:

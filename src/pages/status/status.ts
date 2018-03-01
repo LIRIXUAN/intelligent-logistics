@@ -12,6 +12,7 @@ import { StatusDetailPage } from '../status-detail/status-detail';
   selector: 'page-status',
   templateUrl: 'status.html',
 })
+
 export class StatusPage {
   top_segment: string = "Sensor_All";
 
@@ -23,7 +24,9 @@ export class StatusPage {
     public alertCtrl: AlertController,
     public toastCtrl: ToastController, ) {
   }
-  Sensors = [{ STATUS: '', NAME: '' }];
+  Sensors = [
+    { STATUS: '87', NAME: 'aaa' },
+  ];
   Sensors_Json=[{ STATUS: '', NAME: '' }];
   Sensors_Err = [{}];
 

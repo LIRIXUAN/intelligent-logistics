@@ -24,6 +24,7 @@
 
 <ion-content padding>
   <div [ngSwitch]="top_segment">
+
     <ion-list *ngSwitchCase="'Sensor_All'">
       <ion-searchbar (ionInput)="Search_Bar($event)"></ion-searchbar>
       <button ion-item *ngFor="let item of Sensors" (click)="Open_Detail(item)">

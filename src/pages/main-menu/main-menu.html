@@ -23,7 +23,7 @@
     <ion-row>
       <ion-col ion-item *ngFor="let item of MAIN_MENU" (click)="Open_View(item)" col-6 col-sm-4 col-md-3 col-lg-3 col-xl-3>
         <button style="position: relative;text-align: center;height: 12rem;" ion-button color="{{ item.COLOR }}" full>
-          <ion-badge *ngIf="item.TITLE=='设备状态'" color="danger" style="position: absolute;top:15%;left:80%;">2</ion-badge>
+          <ion-badge *ngIf="item.TITLE=='物流状态'" color="danger" style="position: absolute;top:15%;left:80%;">2</ion-badge>
 
           <ion-icon style="position: absolute;top:15%;font-size:4rem;color:black;" name="{{ item.ICON }}"></ion-icon>
           <div class="button-title">{{item.TITLE}}</div>
