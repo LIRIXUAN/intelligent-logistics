@@ -12,11 +12,10 @@ import { AlertController } from 'ionic-angular';
 })
 
 export class LoginPage {
-  account: { username: string, password: string, save: Boolean, role: string } = {
+  account: { username: string, password: string, save: Boolean } = {
     username: 'user1',
     password: 'test',
     save: true,
-    role: "DOC"
   };
 
   constructor(public navCtrl: NavController,
@@ -37,37 +36,47 @@ export class LoginPage {
 
   doLogin() {
     var api_url = "/api/login/" + this.account.username + "/" + this.account.password
-
-    let loader = this.loadingCtrl.create({
-      content: "登录中，请稍后...",
-    });
+    let loader = this.loadingCtrl.create({ content: "登录中，请稍后...", });
     loader.present();
-
     this.http.get(api_url).subscribe(result => {
       loader.dismiss();
       console.log(result.msg);
       if (result.state == "SUCC") {
-        this.toastCtrl.create({
-          message: result.msg, position: 'top',
-          duration: 2000,
-        }).present();
+        this.toastCtrl.create({ message: result.msg, position: 'top', duration: 2000, }).present();
         this.navCtrl.setRoot('MainMenuPage');
       } else {
-        this.toastCtrl.create({
-          message: result.msg, position: 'top',
-          duration: 2000,
-        }).present();
+        this.toastCtrl.create({ message: result.msg, position: 'top', duration: 2000, }).present();
       }
-
     }, error => {
       loader.dismiss();
       console.log('Login Fail caused by network.')
-      this.toastCtrl.create({
-        message: "登录失败，网络错误...", position: 'top',
-        duration: 3000,
-      }).present();
+      this.toastCtrl.create({ message: "登录失败，网络错误...", position: 'top', duration: 3000, }).present();
     });
-
-
   }
+
+  Check() {
+    var api_url = "/api/data/check"
+    let loader = this.loadingCtrl.create({ content: "获取数据中，请稍后...", });
+    loader.present();
+
+    this.http.get(api_url).subscribe(result => {
+      loader.dismiss();
+      if (result.state == 'SUCC') {
+        this.toastCtrl.create({ message: result.msg, position: 'bottom', duration: 2000, }).present();
+        this.navCtrl.setRoot('MainMenuPage');
+      } else {
+        this.toastCtrl.create({ message: result.msg, position: 'bottom', duration: 2000, }).present();
+      }
+      console.log(result.msg);
+
+    }, error => {
+      loader.dismiss();
+      this.toastCtrl.create({ message: "网络错误，联系管理员解决", position: 'top', duration: 2000, }).present();
+    });
+  }
+
+  ionViewDidLoad() {
+    this.Check();
+  }
+
 }

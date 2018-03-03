@@ -5,18 +5,11 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 * __Github link__: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
 * __Live demo__ : <http://playground.zzthbj.com>
 
+
+
 # 智能物流系统
 
 这是一个智能物流控制系统，使用Ionic作为前端web用户界面框架，Flask作为后端RESTful api服务器。该系统主要用于医院物流系统自动化。
-
-* __Github 地址__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
-* __演示地址__  : <http://playground.zzthbj.com>
-
-## 部分运行截图
-
-更多运行截图在文档最后
-
-<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/face.jpg"/>
 
 ## 主要工作
 
@@ -24,6 +17,23 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 * 界面能适应不同分辨率的屏幕，并优化了在电脑上操作的使用体验。
 * 后台使用Python开发了RESTful api接口。程序同时兼容Python3和Python2，自动识别运行环境(BAE或本地)。
 * 使用Sqlite数据库，并对数据库操作进行了封装，易于更换数据库。
+
+## 部分运行截图
+
+更多运行截图在文档最后
+
+<img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/face.jpg"/>
+
+* __Github 地址__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
+* __演示地址__  : <http://playground.zzthbj.com>
+
+
+## 更新记录
+
+2018/3/3 - James Murray
+* 增加登录页面判断是否已登录
+* 增加session过期设置
+* 增加api：/api/data/check 
 
 ## 如何运行
 
@@ -45,7 +55,16 @@ py index.py
 
 浏览器访问 <http://127.0.0.1> 即可看到效果
 
-## 需要学习哪些相关技术？
+
+## 准备好开始开发了！
+
+### 基本概念
+
+> __Ionic__ 是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
+
+> __Flask__ 是一个使用 Python 编写的轻量级 Web 应用框架。Flask也被称为 “microframework” ，因为它使用简单的核心，用 extension 增加其他功能，简单易学。
+
+> __MVC模式__（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
 
 ### 前端部分
 
@@ -63,16 +82,6 @@ py index.py
 * 学习SQL语言和一种数据库(sqlite 或 mysql)
 * 了解Python WSGI 程序的基本原理，和 WSGI 程序在 Apache 或 Nginx 服务器上的部署
 * 了解应用引擎 app.conf 的编写
-
-## 准备好开始开发了！
-
-### 基本概念
-
-> __Ionic__ 是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
-
-> __Flask__ 是一个使用 Python 编写的轻量级 Web 应用框架。Flask也被称为 “microframework” ，因为它使用简单的核心，用 extension 增加其他功能，简单易学。
-
-> __MVC模式__（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
 
 ### 开始开发
 
