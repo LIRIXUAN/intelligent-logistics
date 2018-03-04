@@ -5,11 +5,12 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 * __Github link__: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
 * __Live demo__ : <http://playground.zzthbj.com>
 
-
-
 # 智能物流系统
 
 这是一个智能物流控制系统，使用Ionic作为前端web用户界面框架，Flask作为后端RESTful api服务器。该系统主要用于医院物流系统自动化。
+
+* __Github 地址__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
+* __演示地址__  : <http://playground.zzthbj.com>
 
 ## 主要工作
 
@@ -24,9 +25,6 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 
 <img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/face.jpg"/>
 
-* __Github 地址__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
-* __演示地址__  : <http://playground.zzthbj.com>
-
 
 ## 更新记录
 
@@ -34,6 +32,9 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 * 增加登录页面判断是否已登录
 * 增加session过期设置
 * 增加api：/api/data/check 
+
+2018/3/4 - James Murray
+* 增加了处理SQL注入的操作，任何输入都只能是只包括0-9,a-Z,A-Z,以及-_的字符串
 
 ## 如何运行
 
@@ -107,13 +108,12 @@ ionic build -prod                               # 进行优化编译
 ### 登录界面
 
 * __API设计__：/api/login/[username]/[password]
-* 注：密码未加密，注意SQL注入问题【暂缓实现】
 * __首次登陆__：用户第一次访问时，Flask会给用户分配一个session，使用cookies加密后储存在用户的电脑中。可以设置一个cookies过期时间，使用户长时间不操作后自动重新登录。
 * __请求过程__：用户点击登录按钮后，网页会使用AXAJ调用API发送登录请求，后台会查询数据库确认用户名密码。若密码正确，后台获取用户的真实姓名(REAL_NAME)和用户组(USER_GROUP)储存在session中。请求过程是异步进行的。在等待服务器响应的过程中，网页会显示一个Loading窗口，服务器返回结果后隐藏这个窗口，并根据服务器返回的信息进行窗口跳转或显示信息。
 * __数据库设计__：用户信息储存在数据库 USER_INFO 表中。主键为自增的ID；USERNAME：用户名，只允许大小写字母和数字，PASSWORD，未加密的密码；REAL_NAME：用户真实姓名；USER_GROUP：用户组,SAVE_PW：是否保存密码,LOGIN_COUNTER：登录次数计数器,FAIL_COUNTER：密码错误次数计数器。登录界面没有设置验证码，可以通过设置密码错误次数计数器上限来避免暴力破解密码。
 * __用户组设计__：系统将用户分成4个用户组，医护人员(DOC)，管理人员(MEN)，工程人员(ENG)，超级用户(SU)。不同用户的权限不同，能看到的信息和能修改的信息也不同。
 * __数据结构__：若用户请求的信息无误，服务器会返回一个json对象，包括state,data,msg 3个key、state只可取 'FAIL' 'SUCC' 两个值，代表这次操作的结果。若操作成功，data为服务器响应的参数，msg为提示信息。若操作失败，data为详细的错误原因，msg为错误原因。
-* __SQL注入防范__：由于服务器会接受用户的输入，就必须考虑别有用心着通过构造特殊的输入来改变SQL语句的功能，造成破坏。因此，目前的做法师，在服务器接收到username,password，以及其他输入后，使用Python正则表达式re库中sub命令：re.sub('[^a-zA-Z0-9]','',kind)，进行过滤，只留下A-Z a-z 0-9 之内的字符，防止SQL注入。
+* __SQL注入防范__：【密码未加密】由于服务器会接受用户的输入，就必须考虑别有用心着通过构造特殊的输入来改变SQL语句的功能，造成破坏。因此，目前的做法师，在服务器接收到username,password，以及其他输入后，使用Python正则表达式re库中sub命令：re.sub('[^a-zA-Z0-9-_]','',kind)，进行过滤，留下只包括A-Z a-z 0-9 _-的字符字符串，防止SQL注入。
 * __跨域访问__：通过 ionic serve 或者 ionic run 命令使用或 live reload 或者访问过外部 API 结点，会遇到 CORS=Cross origin resource sharing(跨域资源共享) 问题。在这个项目开发中，我们使用Flaks提供的调试服务器来同时提供网页文件和api响应，避免了跨域问题。
 * __HTTP请求__：为了高效处理HTTP请求，web端使用TypeScript开发了一个服务器json响应处理类，文件位于/src/network/HttpService.ts，内部使用了 AngularJS 的 http 请求类。
 * __未登录跳转__：若用户长时间未操作，或在未登录的情况下手动输入浏览器地址访问页面。这种情况可能是用户关闭了浏览器，下次打开时，某些浏览器会尝试刷新页面。由于cookies已经过期，username不在session中，服务器认为用户没有登录，会返回 {name:'FAIL',data: 'LOGIN', msg:"未登录"} 的json数据。浏览器接收到 state 为 'FAIL' 且 data 为 'LOGIN' 的数据包后，就会自动跳转到登录界面。
