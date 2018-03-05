@@ -48,7 +48,7 @@ py index.py
 
 ## 四、更新记录
 
-2018/3/4 - James Murray
+2018/3/5 - James Murray
 * 增加了数据库处理中的Insert操作，并规范了数据库操作的返回值。
 
 2018/3/4 - James Murray
