@@ -1,6 +1,6 @@
 # Intelligent Logistics System
 
-What you are looking at is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
+This project is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
 
 * __Github link__: <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
 * __Live demo__ : <http://playground.zzthbj.com>
