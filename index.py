@@ -1,6 +1,6 @@
 #-*- coding:utf-8 -*-
 from __future__ import print_function
-import Get_App
+import server.Server
 import os
 import platform
 import sys
