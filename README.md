@@ -12,31 +12,20 @@ What you are looking at is a traffic command system, which uses Ionic as web int
 * __Github 地址__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git>  
 * __演示地址__  : <http://playground.zzthbj.com>
 
-## 主要工作
+## 一、主要工作
 
 * 通过ionic框架和TypeScript的开发，实现物流系统运行中需要的场景和操作，所有数据都通过AXAJ动态加载。主要功能包括用户登录，session管理，用户权限管理，个人信息修改，设备的状态查询与操作，数据库管理，服务器管理等。
 * 界面能适应不同分辨率的屏幕，并优化了在电脑上操作的使用体验。
 * 后台使用Python开发了RESTful api接口。程序同时兼容Python3和Python2，自动识别运行环境(BAE或本地)。
 * 使用Sqlite数据库，并对数据库操作进行了封装，易于更换数据库。
 
-## 部分运行截图
+## 二、部分运行截图
 
 更多运行截图在文档最后
 
 <img src="https://github.com/JamesMurrayBIT/intelligent-logistics/raw/master/img_readme/face.jpg"/>
 
-
-## 更新记录
-
-2018/3/3 - James Murray
-* 增加登录页面判断是否已登录
-* 增加session过期设置
-* 增加api：/api/data/check 
-
-2018/3/4 - James Murray
-* 增加了处理SQL注入的操作，任何输入都只能是只包括0-9,a-Z,A-Z,以及-_的字符串
-
-## 如何运行
+## 三、如何运行
 
 对于Windows用户，需要安装下面的软件
 * Python(2 or 3) <https://www.python.org/downloads/windows/>
@@ -57,9 +46,22 @@ py index.py
 浏览器访问 <http://127.0.0.1> 即可看到效果
 
 
-## 准备好开始开发了！
+## 四、更新记录
 
-### 基本概念
+2018/3/4 - James Murray
+* 增加了数据库处理中的Insert操作，并规范了数据库操作的返回值。
+
+2018/3/4 - James Murray
+* 增加了处理SQL注入的操作，任何输入都只能是只包括0-9,a-Z,A-Z,以及-_的字符串。
+
+2018/3/3 - James Murray
+* 增加登录页面判断是否已登录
+* 增加session过期设置
+* 增加api：/api/data/check 
+
+# 准备好开始开发了！
+
+### 1、基本概念
 
 > __Ionic__ 是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。比起原生开发，使用Ionic框架开发的应用可以同时兼容iOS，Android，Windows Phone平台，为开发过程节约了大量的时间。
 
@@ -67,7 +69,7 @@ py index.py
 
 > __MVC模式__（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。使用MVC应用程序被分成三个核心部件：模型、视图、控制器。它们各自处理自己的任务。
 
-### 前端部分
+### 2、前端部分
 
 * 请先了解Node.JS,JavaScript,CSS的基本的使用方法。
 * 请了解TypeScript与JavaScript的异同、Sass与CSS的异同。
@@ -75,7 +77,7 @@ py index.py
 * 学习Git的使用
 * 请参阅Ionic的官方文档 [Ionic Doc](https://ionicframework.com/docs/) 学习Ionic框架的组件及API的使用
 
-### 后端部分
+### 3、后端部分
 
 * 学习Python，建议学习 Python3
 * 了解Python2 的 \_\_future\_\_ 库，以及Python2和Python3的区别，以便使程序兼容Python2。(注：大部分的应用引擎，如百度应用引擎BAE，新浪应用引擎SAE，都只支持Python2。可以使用 docker 容器来使其支持Python3，但会增加额外的费用)
@@ -84,7 +86,7 @@ py index.py
 * 了解Python WSGI 程序的基本原理，和 WSGI 程序在 Apache 或 Nginx 服务器上的部署
 * 了解应用引擎 app.conf 的编写
 
-### 开始开发
+### 4、开始开发
 
 ```shell
 git clone https://github.com/JamesMurrayBIT/intelligent-logistics.git
@@ -97,7 +99,8 @@ ionic serve --no-open -port 8080 --consolelogs  # 进行实时编译
 ionic build -prod                               # 进行优化编译
 ```
 
-### 调试技巧
+### 5、调试技巧
+
 * 请使用chrome浏览器进行调试，按下 __[F12]__ 打开调试界面，在右上角的菜单中选择 __[more tools]__ ，选择 __[network conditions]__ ，勾选  __[disable cache]__  来关闭浏览器缓存。
 * 需要发布项目？ 在index.html中加入提示信息，可以在载入界面时避免长时间的白屏。
 * 使用 ionic build -prod 进行优化编译，加快运行速度，简短加载时间
