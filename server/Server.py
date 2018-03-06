@@ -11,7 +11,7 @@ import datetime
 from flask import Flask, safe_join, send_file, make_response, jsonify, escape, request, session, redirect, url_for
 from server.db_sqlite import DB_Sqlite
 
-#       Only in Python 2
+# Only in Python 2
 #if(platform.python_version().startswith('2.')):
 #   reload(sys)
 #   sys.setdefaultencoding('utf-8')
@@ -80,8 +80,7 @@ def api_data(api_raw):
     if kind == 'check':
         return make_json('SUCC', '', "您已登录")
     elif kind == 'sensor':
-        state, result = db.Select(
-            'SENSOR_INFO', ['NAME', 'IMG_SRC', 'STATUS', 'COLOR', 'CAUSE', 'DETAIL'])
+        state, result = db.Select('SENSOR_INFO', ['NAME', 'IMG_SRC', 'STATUS', 'COLOR', 'CAUSE', 'DETAIL'])
         if(state):
             return make_json('SUCC', result, '状态数据载入成功')
         else:
