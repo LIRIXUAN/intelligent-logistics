@@ -2,8 +2,8 @@
 
 这是一个智能物流控制系统，使用Ionic作为前端web用户界面框架，Flask作为后端RESTful api服务器。本系统主要用于医院物流系统自动化。
 
-根据实验室规定，源代码已经从这个仓库中移除。
-如果您需要项目的源代码，请联系<jmy9605@163.com>。
+- 根据实验室规定，源代码已经从这个仓库中移除。
+- 如果您需要项目的源代码，请联系<jmy9605@163.com>。
 
 ## 主要工作
 
@@ -23,8 +23,8 @@
 
 This project is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
 
-Source code is removed from this repository due to Lab Regulations.
-If you need the code, please contect <jmy9605@163.com> .
+- Source code is removed from this repository due to Lab Regulations.
+- If you need the code, please contect <jmy9605@163.com> .
 
 # Get started
 
