@@ -1,6 +1,9 @@
 # Update Log
 
 2018/3/6 - James Murray
+* 将GIT仓库分为公有和私有两个仓库
+
+2018/3/6 - James Murray
 * 为了加快访问速度，将GIT仓库移动到了码云
 * 开始学习flask-admin插件，为系统增加后台管理功能
 

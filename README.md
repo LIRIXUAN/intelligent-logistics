@@ -1,7 +1,3 @@
-# Intelligent Logistics System
-
-This project is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
-
 # 概览
 
 这是一个智能物流控制系统，使用Ionic作为前端web用户界面框架，Flask作为后端RESTful api服务器。本系统主要用于医院物流系统自动化。
@@ -15,10 +11,13 @@ This project is a traffic command system, which uses Ionic as web interface fram
 
 ## 项目地址
 
-* __码云地址(主要)__：https://gitee.com/James-Murray/Intelligent-Logistics.git
+* __码云地址__：https://gitee.com/James-Murray/Intelligent-Logistics.git
 * __Github 地址__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git> 
 * __演示地址__  : <http://playground.zzthbj.com>
 
+# Intelligent Logistics System
+
+This project is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
 
 # Get started
 
@@ -41,6 +40,7 @@ cd intelligent-logistics
 ```shell
 pip install -r requirements.txt
 npm install -g ionic # install cordova if you want to test on real devices   
+npm i  # install node_modules 
 ```
 * Build ionic
 
@@ -51,16 +51,16 @@ ionic build -prod                               # production build
 * Start a new server at localhost
 
 ```shell
-py index.py     
+python index.py --host 0.0.0.0 --port 80 --debug
 ```
 * Visit <http://127.0.0.1> to see the demo
 
-# More Info
+# Documents
 
-* [Screem Shots](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/screenshots.md)
-* [Update Log](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/update.md)
-* [System Detail](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/detail.md)
-* [Develop Guide](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/develop.md)
+* [Screem Shots](/James-Murray/Intelligent-Logistics/blob/master/wiki/screenshots.md)
+* [Update Log](/James-Murray/Intelligent-Logistics/blob/master/wiki/update.md)
+* [System Detail](/James-Murray/Intelligent-Logistics/blob/master/wiki/detail.md)
+* [Develop Guide](/James-Murray/Intelligent-Logistics/blob/master/wiki/develop.md)
 
 # Developer
 
