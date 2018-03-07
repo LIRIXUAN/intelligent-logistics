@@ -14,10 +14,10 @@
 
 ## 项目地址
 
-* __Gitee__：<https://gitee.com/James-Murray/Intelligent-Logistics.git>
+* __Gitee-Public__：<https://gitee.com/James-Murray/Intelligent-Logistics.git>
 * __Github__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git> 
 * __Demo__  : <http://playground.zzthbj.com>
-* __Private__ ：<https://gitee.com/James-Murray/PEMC_Private>
+* __Gitee-Private__ ：<https://gitee.com/James-Murray/PEMC_Private>
 
 # Intelligent Logistics System
 
@@ -64,10 +64,10 @@ python index.py --host 0.0.0.0 --port 80 --debug
 
 # Documents
 
-* [Screem Shots](/James-Murray/Intelligent-Logistics/blob/master/wiki/screenshots.md)
-* [Update Log](/James-Murray/Intelligent-Logistics/blob/master/wiki/update.md)
-* [System Detail](/James-Murray/Intelligent-Logistics/blob/master/wiki/detail.md)
-* [Develop Guide](/James-Murray/Intelligent-Logistics/blob/master/wiki/develop.md)
+* [Screem Shots](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/screenshots.md)
+* [Update Log](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/update.md)
+* [System Detail](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/detail.md)
+* [Develop Guide](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/develop.md)
 
 # Developer
 
