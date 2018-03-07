@@ -2,6 +2,9 @@
 
 这是一个智能物流控制系统，使用Ionic作为前端web用户界面框架，Flask作为后端RESTful api服务器。本系统主要用于医院物流系统自动化。
 
+根据实验室规定，源代码已经从这个仓库中移除。
+如果您需要项目的源代码，请联系<jmy9605@163.com>。
+
 ## 主要工作
 
 * 通过ionic框架和TypeScript的开发，实现物流系统运行中需要的场景和操作，所有数据都通过AXAJ动态加载。主要功能包括用户登录，session管理，用户权限管理，个人信息修改，设备的状态查询与操作，数据库管理，服务器管理等。
@@ -11,13 +14,17 @@
 
 ## 项目地址
 
-* __码云地址__：https://gitee.com/James-Murray/Intelligent-Logistics.git
-* __Github 地址__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git> 
-* __演示地址__  : <http://playground.zzthbj.com>
+* __Gitee__：<https://gitee.com/James-Murray/Intelligent-Logistics.git>
+* __Github__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git> 
+* __Demo__  : <http://playground.zzthbj.com>
+* __Private__ ：<https://gitee.com/James-Murray/PEMC_Private>
 
 # Intelligent Logistics System
 
 This project is a traffic command system, which uses Ionic as web interface framework ,Flask as the back-end RESTful api server framework. The system is mainly used for intelligent logistics in hospitals.
+
+Source code is removed from this repository due to Lab Regulations.
+If you need the code, please contect <jmy9605@163.com> .
 
 # Get started
 
