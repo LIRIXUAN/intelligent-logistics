@@ -64,12 +64,19 @@ python index.py --host 0.0.0.0 --port 80 --debug
 
 # Documents
 
-* [Screem Shots](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/screenshots.md)
-* [Update Log](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/update.md)
-* [System Detail](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/detail.md)
-* [Develop Guide](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/develop.md)
+* [Screen Shots](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/screenshots.md) - Some screen-shots of the program.
+* [System Detail](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/detail.md) - Detailed infomation for each functions.
+* [Develop Guide](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/develop.md) - Guidance for starters.
 
-# Developer
+* [Development Plan](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/plan.md)
+* [Update Log](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/update.md)
+
+# Developers
 
 * 姜牧云(jmy9605@163.com) at PEMC BIT
+* 郝颖 at PEMC BIT
+* 怀娜娜 at PEMC BIT
+* 杨鑫 at PEMC BIT
+* 江倩 at PEMC BIT
+* 曹晓东 at PEMC BIT
 
