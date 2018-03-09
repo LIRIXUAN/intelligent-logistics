@@ -1,5 +1,16 @@
 # Update Log
 
+### 2018/3/9 - 姜牧云
+* 实现了基于flask-admin插件的管理后台，访问地址 http://localhost/admin。
+* 为falsk-admin后台创建了简单的操作手册 server/template/index.html。
+* 使用flask-login插件，升级了之前基于session的简单登录功能。
+* 服务器反馈JSON接口增加了新的log参数，会显示在浏览器console中。
+* 减少了前端toast的弹出次数，并使toast的弹出可以通过服务器控制，优化操作体验。
+* 增加了数据库的导出功能
+* 增加了数据库编辑的下拉菜单选择功能
+* 将某些数据列增加 nullable=False 声明，来避免输入空值
+* 更新了增加了项目文档中关于后台管理界面的截图
+
 ### 2018/3/8 - 姜牧云
 * 解决了升级到ORM SQLAlchemy数据库中的其他问题。
 * 实现了SQLAlchemy到我们系统的接口，目前系统所有数据库应用都能正常使用了。
