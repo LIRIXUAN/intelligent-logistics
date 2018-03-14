@@ -1,15 +1,23 @@
 # Update Log
 
+### 2018/3/12 - 姜牧云
+* 修复 [继承于db.Model类的数据库类的get_Dict成员函数] 的返回值错误的bug
+
+### 2018/3/11 - 姜牧云
+* 将ionic中所有的API和参数定义独立出来，方便调试和编写api文档
+
 ### 2018/3/9 - 姜牧云
-* 实现了基于flask-admin插件的管理后台，访问地址 http://localhost/admin。
-* 为falsk-admin后台创建了简单的操作手册 server/template/index.html。
+* 实现了基于flask-admin插件的管理后台，访问地址 localhost/admin。
+* 为flask-admin后台创建了简单的操作手册 server/template/index.html。
 * 使用flask-login插件，升级了之前基于session的简单登录功能。
 * 服务器反馈JSON接口增加了新的log参数，会显示在浏览器console中。
 * 减少了前端toast的弹出次数，并使toast的弹出可以通过服务器控制，优化操作体验。
-* 增加了数据库的导出功能
-* 增加了数据库编辑的下拉菜单选择功能
-* 将某些数据列增加 nullable=False 声明，来避免输入空值
-* 更新了增加了项目文档中关于后台管理界面的截图
+* 增加了数据库的导出功能。
+* 增加了数据库编辑的下拉菜单选择功能。
+* 将某些数据列增加 nullable=False 声明，来避免输入空值。
+* 增加了项目文档中关于 [后台管理界面] 的截图。
+
+至此，服务器的软件框架开发已经完成。如果没有遇到新的需求，只需要添加数据库，添加API即可。
 
 ### 2018/3/8 - 姜牧云
 * 解决了升级到ORM SQLAlchemy数据库中的其他问题。

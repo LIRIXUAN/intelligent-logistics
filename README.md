@@ -7,16 +7,16 @@
 
 ## 主要工作
 
-* 通过ionic框架和TypeScript的开发，实现物流系统运行中需要的场景和操作，所有数据都通过AXAJ动态加载。主要功能包括用户登录，session管理，用户权限管理，个人信息修改，设备的状态查询与操作，数据库管理，服务器管理等。
-* 界面能适应不同分辨率的屏幕，并优化了在电脑上操作的使用体验。
-* 后台使用Python开发了RESTful api接口。程序同时兼容Python3和Python2，自动识别运行环境(BAE或本地)。
-* 使用Sqlite数据库，并对数据库操作进行了封装，易于更换数据库。
+* 前端使用ionic开发，实现物流系统运行中需要的场景和操作，所有数据都通过AXAJ动态加载。主要功能包括用户登录，session管理，用户权限管理，个人信息修改，设备的状态查询与操作，数据库管理，服务器管理等。
+* 后台使用flask开发了RESTful api接口
+* 使用flask_sqlalchemy对数据库进行ORM封装操作
+* 使用flask_admin实现了后台管理系统
+* 使用flask_login实现了用户登录和用户权限管理
 
 ## 项目地址
 
 * __Gitee-Public__：<https://gitee.com/James-Murray/Intelligent-Logistics.git>
 * __Github__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git> 
-* __Demo__  : <http://playground.zzthbj.com>
 * __Gitee-Private__ ：<https://gitee.com/James-Murray/PEMC_Private>
 
 # Intelligent Logistics System
@@ -64,10 +64,13 @@ python index.py --host 0.0.0.0 --port 80 --debug
 
 # Documents
 
-* [Screen Shots](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/screenshots.md) - Some screen-shots of the program.
-* [System Detail](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/detail.md) - Detailed infomation for each functions.
-* [Develop Guide](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/develop.md) - Guidance for starters.
+System releted
+* [Screen Shots](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/screenshots.md)
+* [System Detail](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/detail.md)
+* [API Document](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/api.md)
 
+Development releted
+* [Develop Guide](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/develop.md)
 * [Development Plan](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/plan.md)
 * [Update Log](https://gitee.com/James-Murray/Intelligent-Logistics/blob/master/wiki/update.md)
 
