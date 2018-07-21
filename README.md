@@ -15,8 +15,7 @@
 
 ## 项目地址
 
-* __Gitee-Public__：<https://gitee.com/James-Murray/Intelligent-Logistics.git>
-* __Github__ : <https://github.com/JamesMurrayBIT/intelligent-logistics.git> 
+* __Github__ : <https://github.com/JamesMY/intelligent-logistics.git> 
 * __Gitee-Private__ ：<https://gitee.com/James-Murray/PEMC_Private>
 
 # Intelligent Logistics System
